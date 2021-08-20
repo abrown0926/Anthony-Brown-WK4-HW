@@ -1,0 +1,143 @@
+body{
+    background-image: url("../assets/coding-image.jpeg");
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  #overlay p{
+    vertical-align: center;
+    text-align:center;
+    font-size: 100px;
+  }
+
+#welcome-container{
+    background-color: #ffbf06;
+    height: 350px;
+    width: 1000px;
+    margin-top: 5%;
+    border-radius: 20px;
+    display: none;
+}
+
+#welcome h1{
+    padding-top: 2%;
+}
+
+#welcome p{
+    padding-top: 5%;
+}
+
+#welcome button{
+    margin-top: 5%;
+    background-color: #020d02;
+}
+
+#quiz-container{
+    background-color: #ffbf06;
+    height: 600px;
+    width: 1000px;
+    margin-top: 5%;
+    border-radius: 20px;
+    display: none;
+}
+
+#timer-div{
+    margin: 20px 10px 20px 10px;
+}
+#time-remaining{
+    float:left;
+   margin-right: 10px;
+}
+
+#minutes {
+    font-size: 24px;
+    float: left;
+  }
+  
+  #seconds {
+    font-size: 18px;
+    float: left;
+  }
+
+  #options{
+    margin-top: 2%;
+  }
+
+  #options button{
+      display: block;
+      margin:10px 0 10px 0;
+      width: 100%;
+      background-color: #020d02;
+  }
+
+  #score{
+      margin-top: 2%;
+  }
+
+  #high-score-container{
+    background-color: #ffbf06;
+    height: 800px;
+    width: 1000px;
+    margin-top: 5%;
+    border-radius: 20px;
+    display: none;
+}
+
+#high-score-container h1{
+    padding-top: 1%;
+}
+
+#score-list{
+    text-align: center;
+}
+
+#btn-restart{
+    display: none;
+    background-color: #020d02;
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        background-image: url(../assets/computer-image.jpeg);
+        width: 100%;      
+      }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        background-image: url(../assets/computer-image.jpeg);
+        width: 100%;      
+      }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    body {
+        background-image: url(../assets/computer-image.jpeg);
+        width: 100%;    
+      }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+    body {
+        background-image: url(../assets/computer-image.jpeg);
+        width: 100%;      
+      }
+}
+

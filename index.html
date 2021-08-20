@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code Quiz by Gene Edwards</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
-    
+
+    <!-- Audio for when a user selects the wrong answer -->
+    <audio id="wrongAudio">
+        <source src="assets/CrowdBoo.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Overlay for Correct/Wrong answers and Time expired -->
+    <div id="overlay">
+        <p id="overlay-text"></p>
+    </div>
+
+    <!-- Welcome container for code quiz -->
+    <div class="container-fluid" id="welcome-container">
+        <div class="row">
+            <div id="welcome" class="col-sm-12 col-md-12 col-lg-12">
+                <h1 class="text-center">Code Trivia</h1>
+                <hr>
+                <p class="text-center">Welcome to Code Trivia! You will go through 10 multiple choice
+                    questions to test your coding knowledge. Be careful...for each question that you get wrong, time
+                    is deducted from the timer <strong>(You have 60 seconds to complete the quiz)</strong>. Let the trivia begin!
+                </p>
+
+                <div class="d-flex justify-content-center">
+                    <button type="button" id="btnStartQuiz" class="btn btn-primary btn-lg">Play Trivia</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for quiz questions -->
+    <div class="container-fluid" id="quiz-container">
+        <div class="row">
+            <!-- Timer -->
+            <div id="timer-div">
+                <p id="time-remaining">Time Remaining: </p>
+                <p id="minutes">01</p>
+                <p id="seconds">00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-body text-center" id="question-container">
+                        <!-- Quiz questions -->
+                        <p id="question"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <!-- Quiz question options -->
+                <div id="options">
+                    <button type="button" id="op1" class="btn btn-secondary" onclick="button(this)">Option 1</button>
+                    <button type="button" id="op2" class="btn btn-secondary" onclick="button(this)">Option 2</button>
+                    <button type="button" id="op3" class="btn btn-secondary" onclick="button(this)">Option 3</button>
+                    <button type="button" id="op4" class="btn btn-secondary" onclick="button(this)">Option 4</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="score-container">
+                    <!-- Score display -->
+                    Score: <span id="score">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz over/ Highscore container -->
+    <div class="container-fluid" id="high-score-container">
+        <h1 class="text-center">Your score is <span id="final-score"></span></h1>
+        <hr>
+        <div class="row ">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <form class="form-inline d-flex justify-content-center">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <!-- User Enter initials -->
+                        <label for="initials-input" style="margin-right: 5px" id="initial-label">Enter Initials:
+                        </label>
+                        <input type="text" class="form-control" id="initials-input">
+                    </div>
+                    <button type="submit" class="btn btn-primary  mb-2" style="margin-right: 5px"
+                        id="btn-initials">Submit</button>
+                    <button type="submit" class="btn btn-success  btn-lg" id="btn-restart">Restart Quiz</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div id="score-list"></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
