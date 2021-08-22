@@ -30,6 +30,7 @@ body{
     margin-top: 5%;
     border-radius: 20px;
     display: none;
+    box-shadow: 0 0 10px 5px;
 }
 
 #welcome h1{
@@ -52,6 +53,13 @@ body{
     margin-top: 5%;
     border-radius: 20px;
     display: none;
+    box-shadow: 0 0 10px 5px;
+}
+
+#question-container{
+    background-color: #020d02;
+    color: white;
+    box-shadow: 0 0 10px 5px;
 }
 
 #timer-div{
@@ -94,6 +102,7 @@ body{
     margin-top: 5%;
     border-radius: 20px;
     display: none;
+    box-shadow: 0 0 10px 5px;
 }
 
 #high-score-container h1{
@@ -102,6 +111,10 @@ body{
 
 #score-list{
     text-align: center;
+}
+
+#btn-initials{
+    background-color: #020d02;
 }
 
 #btn-restart{

@@ -11,11 +11,6 @@
 
 <body>
 
-    <!-- Audio for when a user selects the wrong answer -->
-    <audio id="wrongAudio">
-        <source src="assets/CrowdBoo.mp3" type="audio/mpeg">
-    </audio>
-
     <!-- Overlay for Correct/Wrong answers and Time expired -->
     <div id="overlay">
         <p id="overlay-text"></p>
@@ -83,7 +78,7 @@
 
     <!-- Quiz over/ Highscore container -->
     <div class="container-fluid" id="high-score-container">
-        <h1 class="text-center">Your score is <span id="final-score"></span></h1>
+        <h1 class="text-center">Your score is: <span id="final-score"></span></h1>
         <hr>
         <div class="row ">
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -92,23 +87,23 @@
                         <!-- User Enter initials -->
                         <label for="initials-input" style="margin-right: 5px" id="initial-label">Enter Initials:
                         </label>
-                        <input type="text" class="form-control" id="initials-input">
+                        <input type="text" class="form-control" id="initials-input" placeholder="Initials">
                     </div>
                     <button type="submit" class="btn btn-primary  mb-2" style="margin-right: 5px"
-                        id="btn-initials">Submit</button>
+                        id="btn-initials">Save Score</button>
                     <button type="submit" class="btn btn-success  btn-lg" id="btn-restart">Restart Quiz</button>
                 </form>
             </div>
         </div>
+        
+        <hr>
+
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div id="score-list"></div>
             </div>
         </div>
-
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
